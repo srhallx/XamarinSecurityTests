@@ -5,7 +5,7 @@ Sample project for EMM Vendor security certification
 
 Xamarin.Forms application for iOS and Android provides sample functionality for the following device features:
 * Web viewer
-* WS Transaction (HTTP) - Uses ModernHttpClient: NSURLSession and OkHttp
+* WS Transaction (HTTP & HTTPS) - Uses ModernHttpClient: NSURLSession and OkHttp
 * SQLite Transactions
 * Camera access
 * Geolocation access
