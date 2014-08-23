@@ -16,51 +16,45 @@ namespace SecurityTestsSql
 				Title = "Xamarin Test Suite"
 			};
 
+
+			//Setup functional buttons
 			Button excerciseSQL = new Button {
 				Text = "SQL",
-				VerticalOptions = LayoutOptions.Start,
 				Image = "database.png"
 			};		
 
 			Button camera = new Button {
 				Text = "Cam",
-				VerticalOptions = LayoutOptions.Start,
 				Image = "camera.png"
 			};
 
 			Button web = new Button {
 				Text = "Web",
-				VerticalOptions = LayoutOptions.Start,
 				Image = "earth.png"
 			};
 
 			Button geo = new Button {
 				Text = "Geo",
-				VerticalOptions = LayoutOptions.Start,
 				Image = "compass.png"
 			};
 
 			Button ws = new Button {
 				Text = "WS",
-				VerticalOptions = LayoutOptions.Start,
 				Image = "ws.png"
 			};
 
 			Button bluetooth = new Button {
 				Text = "BT",
-				VerticalOptions = LayoutOptions.Start,
 				Image = "bluetooth.png"
 			};
 
 			Button send = new Button {
 				Text = "Send",
-				VerticalOptions = LayoutOptions.Start,
 				Image = "send.png"
 			};
 
 			Button share = new Button {
 				Text = "Share",
-				VerticalOptions = LayoutOptions.Start,
 				Image = "share.png"
 			};
 
@@ -69,6 +63,7 @@ namespace SecurityTestsSql
 			};
 
 
+			// Event handlers for buttons
 			excerciseSQL.Clicked += (object sender, EventArgs e) => {
 				results.Text = "";
 				DataOperations dao = new DataOperations();
@@ -92,11 +87,10 @@ namespace SecurityTestsSql
 			};
 
 			geo.Clicked += (object sender, EventArgs e) => {
-				results.Text = "";
 				DependencyService.Get<ICameraPage>().OpenGPS();
 				DependencyService.Get<ICameraPage>().GPSUpdated += (object s, EventArgs e1) => {
 					Position gps = (Position)s;
-					results.Text += String.Format("GPS: lat{0} lon{1} alt{2}", gps.Latitude, gps.Longitude, gps.Altitude) + "\n";
+					results.Text = String.Format("GPS: lat{0} lon{1} alt{2}", gps.Latitude, gps.Longitude, gps.Altitude) + "\n";
 				};
 			};
 				
@@ -106,7 +100,13 @@ namespace SecurityTestsSql
 				Task<HttpResponseMessage> getResponse = httpClient.GetAsync("http://wsf.cdyne.com/WeatherWS/Weather.asmx/GetCityForecastByZIP?ZIP=76092");
 				HttpResponseMessage msg = getResponse.Result;
 				Task<string> finalMsg = msg.Content.ReadAsStringAsync();
-				results.Text = finalMsg.Result;
+				results.Text = "HTTP\n" + finalMsg.Result.Substring(0, 300) + "...\n";
+
+				//api key is limited to 1000 requests/month
+				Task<HttpResponseMessage> getResponse2 = httpClient.GetAsync("https://api.forecast.io/forecast/f0fc68cd396162493bc12640cdbfdde0/37.8267,-122.423");
+				HttpResponseMessage msg2 = getResponse2.Result;
+				Task<string> finalMsg2 = msg2.Content.ReadAsStringAsync();
+				results.Text += "\nHTTPS\n" + finalMsg2.Result.Substring(0,300) + "...\n";
 			};
 
 			Grid buttonGrid = new Grid {
@@ -121,6 +121,8 @@ namespace SecurityTestsSql
 					new ColumnDefinition {Width = new GridLength(1, GridUnitType.Star)}
 				}
 			};
+
+			//Add buttons to grid layout
 			buttonGrid.Children.Add (excerciseSQL, 0, 0);
 			buttonGrid.Children.Add (camera, 0, 1);
 			buttonGrid.Children.Add (web, 0, 2);
