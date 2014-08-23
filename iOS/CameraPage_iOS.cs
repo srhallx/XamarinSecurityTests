@@ -1,0 +1,49 @@
+﻿using System;
+using Xamarin.Forms;
+using SecurityTestsSql.iOS;
+using Xamarin.Media;
+using Xamarin.Geolocation;
+using System.Threading.Tasks;
+using System.Net.Http;
+
+
+
+[assembly: Dependency (typeof (CameraPage_iOS))]
+namespace SecurityTestsSql.iOS
+{
+	public class CameraPage_iOS : ICameraPage
+	{
+		public CameraPage_iOS ()
+		{
+
+		}
+
+		public event EventHandler GPSUpdated;			
+
+		#region ICameraPage implementation
+
+		public void OpenCamera ()
+		{
+			var picker = new MediaPicker();
+			picker.PickPhotoAsync ();
+		}
+			
+
+		public void OpenGPS ()
+		{
+			var locator = new Geolocator { DesiredAccuracy = 50 };
+			//            new Geolocator (this) { ... }; on Android
+			locator.GetPositionAsync (timeout: 10000).ContinueWith (t => {
+				Position p = new Position();
+				p.Latitude = t.Result.Latitude;
+				p.Longitude = t.Result.Longitude;
+				p.Altitude = t.Result.Altitude;
+
+				if (GPSUpdated != null)
+					GPSUpdated(p, new EventArgs());
+			}, TaskScheduler.FromCurrentSynchronizationContext());
+		}
+		#endregion
+	}
+}
+
