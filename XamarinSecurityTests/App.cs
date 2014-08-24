@@ -6,7 +6,7 @@ using System.Net.Http;
 using ModernHttpClient;
 using System.Threading.Tasks;
 
-namespace SecurityTestsSql
+namespace XamarinSecurityTests
 {
 	public class App
 	{
@@ -93,7 +93,7 @@ namespace SecurityTestsSql
 					results.Text = String.Format("GPS: lat{0} lon{1} alt{2}", gps.Latitude, gps.Longitude, gps.Altitude) + "\n";
 				};
 			};
-				
+
 			ws.Clicked += (object sender, EventArgs e) => {
 				var httpClient = new HttpClient(new NativeMessageHandler());
 

@@ -3,19 +3,20 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
-    <SharedGUID>{83B6EE7C-5B24-4D61-A055-54C5F5360A8E}</SharedGUID>
+    <SharedGUID>{923412FD-B9CD-4BC9-82EC-690C16BCE870}</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>SecurityTestsSql</Import_RootNamespace>
+    <Import_RootNamespace>XamarinSecurityTests</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Person.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)PeopleDatabase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DataOperations.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)MobileOperations.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ICameraPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)WebViewer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IMobileOperations.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IOpenDoc.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MobileOperations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PeopleDatabase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Person.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WebViewer.cs" />
   </ItemGroup>
 </Project>

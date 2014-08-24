@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SecurityTestsSql.Android
+namespace XamarinSecurityTests.Android
 {
 	public class OpenDoc : IOpenDoc
 	{

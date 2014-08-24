@@ -5,7 +5,7 @@ using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
-namespace SecurityTestsSql.iOS
+namespace XamarinSecurityTests.iOS
 {
 	public class Application
 	{

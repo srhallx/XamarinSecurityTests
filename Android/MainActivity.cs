@@ -11,9 +11,9 @@ using Android.OS;
 using Xamarin.Forms.Platform.Android;
 
 
-namespace SecurityTestsSql.Android
+namespace XamarinSecurityTests.Android
 {
-	[Activity (Label = "SecurityTestsSql.Android.Android", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	[Activity (Label = "XamarinSecurityTests.Android.Android", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : AndroidActivity
 	{
 		protected override void OnCreate (Bundle bundle)

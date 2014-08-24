@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SecurityTestsSql
+namespace XamarinSecurityTests
 {
 	public interface IMobileOperations
 	{

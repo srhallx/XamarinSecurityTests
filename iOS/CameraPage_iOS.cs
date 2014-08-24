@@ -1,6 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
-using SecurityTestsSql.iOS;
+using XamarinSecurityTests.iOS;
 using Xamarin.Media;
 using Xamarin.Geolocation;
 using System.Threading.Tasks;
@@ -9,7 +9,7 @@ using System.Net.Http;
 
 
 [assembly: Dependency (typeof (CameraPage_iOS))]
-namespace SecurityTestsSql.iOS
+namespace XamarinSecurityTests.iOS
 {
 	public class CameraPage_iOS : ICameraPage
 	{

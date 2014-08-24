@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-namespace SecurityTestsSql
+namespace XamarinSecurityTests
 {
 
 

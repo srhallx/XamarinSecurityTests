@@ -2,7 +2,7 @@
 using Android;
 using Xamarin.Media;
 using Xamarin.Forms;
-using SecurityTestsSql.Android;
+using XamarinSecurityTests.Android;
 using Xamarin.Geolocation;
 using System.Threading.Tasks;
 using System.Net.Http;
@@ -11,7 +11,7 @@ using OkHttp;
 
 
 [assembly: Dependency (typeof (CameraPage_Android))]
-namespace SecurityTestsSql.Android
+namespace XamarinSecurityTests.Android
 {
 	public class CameraPage_Android : ICameraPage
 	{

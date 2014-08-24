@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 
-namespace SecurityTestsSql
+namespace XamarinSecurityTests
 {
 	public class WebViewer : ContentPage
 	{

@@ -1,7 +1,7 @@
 ﻿using System;
 using SQLite;
 
-namespace SecurityTestsSql
+namespace XamarinSecurityTests
 {
 	public class Person
 	{

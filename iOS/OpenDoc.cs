@@ -4,7 +4,7 @@ using MonoTouch.UIKit;
 using MonoTouch.Foundation;
 
 
-namespace SecurityTestsSql.iOS
+namespace XamarinSecurityTests.iOS
 {
 	public class OpenDoc : IOpenDoc
 	{

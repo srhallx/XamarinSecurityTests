@@ -4,11 +4,11 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{5C614EB6-6CF4-419F-B608-1D43FFE7D518}</ProjectGuid>
+    <ProjectGuid>{A3B308D3-AE26-4A47-AA63-723535EDD1C4}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SecurityTestsSql.iOS</RootNamespace>
+    <RootNamespace>XamarinSecurityTests.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>SecurityTestsSqliOS</AssemblyName>
+    <AssemblyName>XamarinSecurityTestsiOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,9 +22,6 @@
     <MtouchLink>None</MtouchLink>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchDebug>true</MtouchDebug>
-    <MtouchI18n>
-    </MtouchI18n>
-    <MtouchArch>i386</MtouchArch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
@@ -48,8 +45,6 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchDebug>true</MtouchDebug>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <IpaPackageName>
-    </IpaPackageName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>full</DebugType>
@@ -89,9 +84,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
-    <Reference Include="SQLite">
-      <HintPath>..\Components\sqlite-net-1.0.8\lib\ios\SQLite.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Forms.Platform.iOS">
       <HintPath>..\packages\Xamarin.Forms.1.2.2.6243\lib\MonoTouch10\Xamarin.Forms.Platform.iOS.dll</HintPath>
     </Reference>
@@ -101,25 +93,28 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.1.2.2.6243\lib\MonoTouch10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="ModernHttpClient">
+      <HintPath>..\packages\modernhttpclient.2.0.1\lib\MonoTouch\ModernHttpClient.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Mobile">
       <HintPath>..\Components\xamarin.mobile-0.7.1\lib\ios\Xamarin.Mobile.dll</HintPath>
     </Reference>
-    <Reference Include="ModernHttpClient">
-      <HintPath>..\packages\modernhttpclient.2.0.1\lib\MonoTouch\ModernHttpClient.dll</HintPath>
+    <Reference Include="SQLite">
+      <HintPath>..\Components\sqlite-net-1.0.8\lib\ios\SQLite.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\database.png" />
+    <BundleResource Include="Resources\bluetooth.png" />
     <BundleResource Include="Resources\camera.png" />
-    <BundleResource Include="Resources\earth.png" />
     <BundleResource Include="Resources\compass.png" />
-    <BundleResource Include="Resources\ws.png" />
+    <BundleResource Include="Resources\database.png" />
+    <BundleResource Include="Resources\earth.png" />
+    <BundleResource Include="Resources\gettingstarted.pdf" />
     <BundleResource Include="Resources\send.png" />
     <BundleResource Include="Resources\share.png" />
-    <BundleResource Include="Resources\bluetooth.png" />
+    <BundleResource Include="Resources\ws.png" />
     <BundleResource Include="Resources\Default-568h%402x.png" />
-    <BundleResource Include="Resources\gettingstarted.pdf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -132,16 +127,16 @@
     <Compile Include="CameraPage_iOS.cs" />
     <Compile Include="OpenDoc.cs" />
   </ItemGroup>
-  <Import Project="..\SecurityTestsSql\XamarinTestSuite.projitems" Label="Shared" Condition="Exists('..\SecurityTestsSql\XamarinTestSuite.projitems')" />
+  <Import Project="..\XamarinSecurityTests\XamarinSecurityTests.projitems" Label="Shared" Condition="Exists('..\XamarinSecurityTests\XamarinSecurityTests.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.2.2.6243\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.2.2.6243\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
   <ItemGroup>
-    <XamarinComponentReference Include="sqlite-net">
-      <Version>1.0.8</Version>
-      <Visible>False</Visible>
-    </XamarinComponentReference>
     <XamarinComponentReference Include="xamarin.mobile">
       <Version>0.7.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="sqlite-net">
+      <Version>1.0.8</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>

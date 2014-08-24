@@ -7,7 +7,7 @@ using MonoTouch.UIKit;
 
 using Xamarin.Forms;
 
-namespace SecurityTestsSql.iOS
+namespace XamarinSecurityTests.iOS
 {
 	[Register ("AppDelegate")]
 	public partial class AppDelegate : UIApplicationDelegate
