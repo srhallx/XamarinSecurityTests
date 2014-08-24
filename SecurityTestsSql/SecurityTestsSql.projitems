@@ -16,5 +16,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)MobileOperations.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ICameraPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)WebViewer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IOpenDoc.cs" />
   </ItemGroup>
 </Project>

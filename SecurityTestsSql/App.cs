@@ -102,7 +102,7 @@ namespace SecurityTestsSql
 				Task<string> finalMsg = msg.Content.ReadAsStringAsync();
 				results.Text = "HTTP\n" + finalMsg.Result.Substring(0, 300) + "...\n";
 
-				//api key is limited to 1000 requests/month
+				//api key is limited to 1000 requests/day
 				Task<HttpResponseMessage> getResponse2 = httpClient.GetAsync("https://api.forecast.io/forecast/f0fc68cd396162493bc12640cdbfdde0/37.8267,-122.423");
 				HttpResponseMessage msg2 = getResponse2.Result;
 				Task<string> finalMsg2 = msg2.Content.ReadAsStringAsync();
