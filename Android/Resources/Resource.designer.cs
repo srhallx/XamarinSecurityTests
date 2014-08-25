@@ -24,13 +24,6 @@ namespace XamarinSecurityTests.Android
 			global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 		}
 		
-		public static void UpdateIdValues()
-		{
-			global::ModernHttpClient.Resource.String.library_name = global::XamarinSecurityTests.Android.Resource.String.library_name;
-			global::SQLite.Resource.String.ApplicationName = global::XamarinSecurityTests.Android.Resource.String.ApplicationName;
-			global::SQLite.Resource.String.Hello = global::XamarinSecurityTests.Android.Resource.String.Hello;
-		}
-		
 		public partial class Attribute
 		{
 			
@@ -93,9 +86,6 @@ namespace XamarinSecurityTests.Android
 			// aapt resource value: 0x7f050001
 			public const int textView1 = 2131034113;
 			
-			// aapt resource value: 0x7f050002
-			public const int textView2 = 2131034114;
-			
 			static Id()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -129,19 +119,10 @@ namespace XamarinSecurityTests.Android
 		{
 			
 			// aapt resource value: 0x7f040001
-			public const int ApplicationName = 2130968577;
+			public const int app_name = 2130968577;
 			
 			// aapt resource value: 0x7f040000
-			public const int Hello = 2130968576;
-			
-			// aapt resource value: 0x7f040004
-			public const int app_name = 2130968580;
-			
-			// aapt resource value: 0x7f040003
-			public const int hello = 2130968579;
-			
-			// aapt resource value: 0x7f040002
-			public const int library_name = 2130968578;
+			public const int print = 2130968576;
 			
 			static String()
 			{

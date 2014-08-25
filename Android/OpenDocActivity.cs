@@ -9,7 +9,6 @@ using Android.Net;
 using Android.Content.PM;
 using Android.Database;
 using Android.Graphics;
-using Android.Net;
 using Android.OS;
 using Android.Provider;
 using Android.Runtime;
@@ -17,6 +16,7 @@ using Android.Views;
 using Android.Widget;
 using Mono;
 using Android.Net.Http;
+
 
 [assembly: UsesPermission(Android.Manifest.Permission.Internet)]
 namespace XamarinSecurityTests.Android
@@ -33,6 +33,9 @@ namespace XamarinSecurityTests.Android
 			var button = FindViewById<Button> (Resource.Id.myButton);
 
 			button.Click += (sender, e) => {
+//				var printMgr = (Android.Print.PrintManager)GetSystemService(Context.PrintService);
+//				printMgr.Print("Razor HMTL Hybrid", webView.CreatePrintDocumentAdapter(), null);
+
 				Finish(); // back to the previous activity
 			};
 				
@@ -48,7 +51,7 @@ namespace XamarinSecurityTests.Android
 			}
 			catch (Exception ex) 
 			{
-				Console.WriteLine ("COULD NOT START PDF ACTIVITY");
+				Console.WriteLine ("COULD NOT START PDF ACTIVITY " + ex.Message);
 			}
 
 		}

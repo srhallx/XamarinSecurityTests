@@ -19,7 +19,6 @@ namespace XamarinSecurityTests
 	/// </summary>
 	public class OpenDocPageRenderer : PageRenderer
 	{
-		UIView myView;
 
 		protected override void OnElementChanged (VisualElementChangedEventArgs e)
 		{

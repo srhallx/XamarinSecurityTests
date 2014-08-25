@@ -45,12 +45,12 @@ namespace XamarinSecurityTests
 
 			Button bluetooth = new Button {
 				Text = "BT",
-				Image = "bluetooth.png"
+				Image = "bluetooth.png", IsEnabled = false
 			};
 
 			Button send = new Button {
 				Text = "Send",
-				Image = "send.png"
+				Image = "send.png", IsEnabled = false
 			};
 
 			Button share = new Button {

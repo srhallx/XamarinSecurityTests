@@ -16,7 +16,12 @@ namespace XamarinSecurityTests
 		}
 
 
-
+		/// <summary>
+		/// Attempts to drop and create a database table.
+		/// Add records to table.
+		/// Report on number of rows inserted.
+		/// </summary>
+		/// <param name="dbName">Db name.</param>
 		public void CheckAndCreateDatabase (string dbName)
 		{
 			try 
@@ -32,10 +37,10 @@ namespace XamarinSecurityTests
 					List<Person> people = new List<Person> ();
 
 					// create a list of people that we're going to insert
-					people.Add (CreatePerson ("Peter", "Gabriel"));
-					people.Add (CreatePerson ("Thom", "Yorke"));
-					people.Add (CreatePerson ("J", "Spaceman"));
-					people.Add (CreatePerson ("Benjamin", "Gibbard"));
+					people.Add (new Person ("Peter", "Gabriel"));
+					people.Add (new Person ("Thom", "Yorke"));
+					people.Add (new Person ("J", "Spaceman"));
+					people.Add (new Person ("Benjamin", "Gibbard"));
 
 					// insert our people
 					int rows = db.InsertAll (people);
@@ -51,6 +56,11 @@ namespace XamarinSecurityTests
 			}
 		}
 
+
+		/// <summary>
+		/// Queries the database.
+		/// </summary>
+		/// <param name="dbName">Db name.</param>
 		public void QueryDatabase(string dbName)
 		{
 			try
@@ -70,6 +80,10 @@ namespace XamarinSecurityTests
 			}
 		}
 
+		/// <summary>
+		/// Deletes specified row in DB.
+		/// </summary>
+		/// <param name="dbName">Db name.</param>
 		public void DeleteRows(string dbName)
 		{
 			try
@@ -91,12 +105,7 @@ namespace XamarinSecurityTests
 				Log (ex.Message);
 			}
 		}
-
-
-		Person CreatePerson(string firstname, string lastname) 
-		{
-			return new Person () { FirstName = firstname, LastName = lastname };
-		}
+			
 
 		protected string GetDBPath (string dbName)
 		{
