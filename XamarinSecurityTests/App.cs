@@ -86,6 +86,10 @@ namespace XamarinSecurityTests
 				myPage.Navigation.PushAsync(new WebViewer());
 			};
 
+			share.Clicked += (object sender, EventArgs e) => {
+				myPage.Navigation.PushAsync(new OpenDocPage());
+			};
+
 			geo.Clicked += (object sender, EventArgs e) => {
 				DependencyService.Get<ICameraPage>().OpenGPS();
 				DependencyService.Get<ICameraPage>().GPSUpdated += (object s, EventArgs e1) => {

@@ -125,7 +125,8 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="CameraPage_iOS.cs" />
-    <Compile Include="OpenDoc.cs" />
+    <Compile Include="OpenDocPageRenderer.cs" />
+    <Compile Include="OpenDocViewController.cs" />
   </ItemGroup>
   <Import Project="..\XamarinSecurityTests\XamarinSecurityTests.projitems" Label="Shared" Condition="Exists('..\XamarinSecurityTests\XamarinSecurityTests.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />

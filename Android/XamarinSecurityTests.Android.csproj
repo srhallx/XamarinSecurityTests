@@ -74,7 +74,8 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CameraPage_Android.cs" />
-    <Compile Include="OpenDoc.cs" />
+    <Compile Include="OpenDocActivity.cs" />
+    <Compile Include="OpenDocPageRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -94,6 +95,7 @@
     <AndroidResource Include="Resources\drawable\send.png" />
     <AndroidResource Include="Resources\drawable\share.png" />
     <AndroidResource Include="Resources\drawable\ws.png" />
+    <AndroidResource Include="Resources\layout\OpenDocRenderer.axml" />
   </ItemGroup>
   <Import Project="..\XamarinSecurityTests\XamarinSecurityTests.projitems" Label="Shared" Condition="Exists('..\XamarinSecurityTests\XamarinSecurityTests.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

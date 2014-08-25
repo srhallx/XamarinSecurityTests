@@ -28,7 +28,7 @@ namespace XamarinSecurityTests
 				
 			goButton.Clicked += (object sender, EventArgs e) => {
 				string url = urlBar.Text;
-				if (!url.StartsWith("http://"))
+				if (!url.StartsWith("http://") && !url.StartsWith("https://"))
 					url = "http://" + url;
 
 				viewer.Source = new UrlWebViewSource { Url = url };

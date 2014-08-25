@@ -53,6 +53,6 @@ Global
 		{A3B308D3-AE26-4A47-AA63-723535EDD1C4}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = iOS\XamarinSecurityTests.iOS.csproj
+		StartupItem = Android\XamarinSecurityTests.Android.csproj
 	EndGlobalSection
 EndGlobal

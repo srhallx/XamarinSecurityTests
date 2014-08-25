@@ -25,7 +25,9 @@ namespace XamarinSecurityTests.iOS
 		public void OpenCamera ()
 		{
 			var picker = new MediaPicker();
-			picker.PickPhotoAsync ();
+			StoreCameraMediaOptions scmo = new StoreCameraMediaOptions ();
+			scmo.Name = "tempphoto";
+			picker.TakePhotoAsync (scmo);
 		}
 			
 
