@@ -90,6 +90,10 @@ namespace XamarinSecurityTests
 				myPage.Navigation.PushAsync(new OpenDocPage());
 			};
 
+			bluetooth.Clicked += (object sender, EventArgs e) => {
+				myPage.Navigation.PushAsync(new BTConnectPage());
+			};
+
 			geo.Clicked += (object sender, EventArgs e) => {
 				DependencyService.Get<ICameraPage>().OpenGPS();
 				DependencyService.Get<ICameraPage>().GPSUpdated += (object s, EventArgs e1) => {

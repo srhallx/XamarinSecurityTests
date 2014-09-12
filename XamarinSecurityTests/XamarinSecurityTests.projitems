@@ -19,5 +19,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Person.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)WebViewer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)OpenDocPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BTConnectPage.cs" />
   </ItemGroup>
 </Project>

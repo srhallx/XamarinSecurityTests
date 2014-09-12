@@ -13,10 +13,10 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
 
-[assembly:ExportRenderer(typeof(XamarinSecurityTests.OpenDocPage), typeof(XamarinSecurityTests.OpenDocPageRenderer))]
+[assembly:ExportRenderer(typeof(XamarinSecurityTests.BTConnectPage), typeof(XamarinSecurityTests.BTConnectPageRenderer))]
 namespace XamarinSecurityTests
 {
-	public class OpenDocPageRenderer : PageRenderer
+	public class BTConnectPageRenderer : PageRenderer
 	{
 		protected override void OnElementChanged (ElementChangedEventArgs<Page> e)
 		{
@@ -25,8 +25,10 @@ namespace XamarinSecurityTests
 			// this is a ViewGroup - so should be able to load an AXML file and FindView<>
 			var activity = this.Context as Activity;
 
-			var docActivity = new Intent (activity, typeof (XamarinSecurityTests.Android.OpenDocActivity));
+			var docActivity = new Intent (activity, typeof (XamarinSecurityTests.Android.BTConnectActivity));
 			activity.StartActivity (docActivity);
+
 		}
 	}
 }
+

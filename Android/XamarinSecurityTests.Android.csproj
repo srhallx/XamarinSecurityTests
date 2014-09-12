@@ -76,6 +76,8 @@
     <Compile Include="CameraPage_Android.cs" />
     <Compile Include="OpenDocActivity.cs" />
     <Compile Include="OpenDocPageRenderer.cs" />
+    <Compile Include="BTConnectActivity.cs" />
+    <Compile Include="BTConnectPageRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
