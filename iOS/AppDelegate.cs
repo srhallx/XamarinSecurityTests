@@ -4,7 +4,7 @@ using System.Linq;
 
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
-
+using Xamarin;
 using Xamarin.Forms;
 
 namespace XamarinSecurityTests.iOS
@@ -17,6 +17,8 @@ namespace XamarinSecurityTests.iOS
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
 			Forms.Init ();
+
+			Insights.Initialize("48e4e4b9b56bb7789f883b4b9aeeb3f1f2a55836");
 
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
 			

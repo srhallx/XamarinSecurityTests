@@ -20,5 +20,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)WebViewer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)OpenDocPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BTConnectPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IMicPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OpenAudioPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IPrintPage.cs" />
   </ItemGroup>
 </Project>

@@ -48,14 +48,19 @@ namespace XamarinSecurityTests
 				Image = "bluetooth.png", IsEnabled = false
 			};
 
-			Button send = new Button {
-				Text = "Send",
-				Image = "send.png", IsEnabled = false
+			Button print = new Button {
+				Text = "Print",
+				Image = "print.png"
 			};
 
 			Button share = new Button {
 				Text = "Share",
 				Image = "share.png"
+			};
+
+			Button audio = new Button {
+				Text = "Audio",
+				Image = "audio.png"
 			};
 
 			Editor results = new Editor () {
@@ -86,6 +91,10 @@ namespace XamarinSecurityTests
 				myPage.Navigation.PushAsync(new WebViewer());
 			};
 
+			print.Clicked += (object sender, EventArgs e) => {
+				DependencyService.Get<IPrintPage>().OpenPrinter();
+			};
+
 			share.Clicked += (object sender, EventArgs e) => {
 				myPage.Navigation.PushAsync(new OpenDocPage());
 			};
@@ -100,6 +109,10 @@ namespace XamarinSecurityTests
 					Position gps = (Position)s;
 					results.Text = String.Format("GPS: lat{0} lon{1} alt{2}", gps.Latitude, gps.Longitude, gps.Altitude) + "\n";
 				};
+			};
+
+			audio.Clicked += (object sender, EventArgs e) => {
+				myPage.Navigation.PushAsync(new OpenAudioPage());
 			};
 
 			ws.Clicked += (object sender, EventArgs e) => {
@@ -122,6 +135,7 @@ namespace XamarinSecurityTests
 					new RowDefinition {Height = GridLength.Auto},
 					new RowDefinition {Height = GridLength.Auto},
 					new RowDefinition {Height = GridLength.Auto},
+					new RowDefinition {Height = GridLength.Auto},
 					new RowDefinition {Height = GridLength.Auto}
 				},
 				ColumnDefinitions = {
@@ -135,10 +149,13 @@ namespace XamarinSecurityTests
 			buttonGrid.Children.Add (camera, 0, 1);
 			buttonGrid.Children.Add (web, 0, 2);
 			buttonGrid.Children.Add (geo, 0, 3);
+			buttonGrid.Children.Add (audio, 0, 4);
 			buttonGrid.Children.Add (ws, 1, 0);
 			buttonGrid.Children.Add (bluetooth, 1, 1);
 			buttonGrid.Children.Add (share, 1, 2);
-			buttonGrid.Children.Add (send, 1, 3);
+			buttonGrid.Children.Add (print, 1, 3);
+
+
 
 			myPage.Content = new StackLayout {
 				Children = { 

@@ -7,8 +7,6 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 using XamarinSecurityTests.iOS;
 using MonoTouch.CoreBluetooth;
-using System;
-using MonoTouch.CoreBluetooth;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

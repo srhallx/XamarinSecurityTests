@@ -26,9 +26,11 @@ namespace XamarinSecurityTests.Android
 		
 		public static void UpdateIdValues()
 		{
-			global::ModernHttpClient.Resource.String.library_name = global::XamarinSecurityTests.Android.Resource.String.library_name;
 			global::SQLite.Resource.String.ApplicationName = global::XamarinSecurityTests.Android.Resource.String.ApplicationName;
 			global::SQLite.Resource.String.Hello = global::XamarinSecurityTests.Android.Resource.String.Hello;
+			global::ModernHttpClient.Resource.String.library_name = global::XamarinSecurityTests.Android.Resource.String.library_name;
+			global::Xamarin.InsightsCore.Resource.String.ApplicationName = global::XamarinSecurityTests.Android.Resource.String.ApplicationName;
+			global::Xamarin.InsightsCore.Resource.String.Hello = global::XamarinSecurityTests.Android.Resource.String.Hello;
 		}
 		
 		public partial class Attribute
@@ -48,31 +50,37 @@ namespace XamarinSecurityTests.Android
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int bluetooth = 2130837504;
+			public const int audio = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int camera = 2130837505;
+			public const int bluetooth = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int compass = 2130837506;
+			public const int camera = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int database = 2130837507;
+			public const int compass = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int earth = 2130837508;
+			public const int database = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int Icon = 2130837509;
+			public const int earth = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int send = 2130837510;
+			public const int Icon = 2130837510;
 			
 			// aapt resource value: 0x7f020007
-			public const int share = 2130837511;
+			public const int print = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-			public const int ws = 2130837512;
+			public const int send = 2130837512;
+			
+			// aapt resource value: 0x7f020009
+			public const int share = 2130837513;
+			
+			// aapt resource value: 0x7f02000a
+			public const int ws = 2130837514;
 			
 			static Drawable()
 			{
