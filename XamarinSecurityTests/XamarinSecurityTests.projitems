@@ -23,5 +23,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)IMicPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)OpenAudioPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IPrintPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)InternalWSPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Settings.cs" />
   </ItemGroup>
 </Project>

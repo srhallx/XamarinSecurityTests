@@ -63,6 +63,10 @@ namespace XamarinSecurityTests
 				Image = "audio.png"
 			};
 
+			Button internalWS = new Button {
+				Text = "InternalWS"
+			};
+
 			Editor results = new Editor () {
 				VerticalOptions = LayoutOptions.FillAndExpand
 			};
@@ -80,6 +84,10 @@ namespace XamarinSecurityTests
 				dao.CheckAndCreateDatabase("testdb.db3");
 				dao.QueryDatabase("testdb.db3");
 				dao.DeleteRows("testdb.db3");
+			};
+
+			internalWS.Clicked += (object sender, EventArgs e) => {
+				myPage.Navigation.PushAsync(new InternalWSPage());
 			};
 
 			camera.Clicked += (object sender, EventArgs e) => {
@@ -154,6 +162,7 @@ namespace XamarinSecurityTests
 			buttonGrid.Children.Add (bluetooth, 1, 1);
 			buttonGrid.Children.Add (share, 1, 2);
 			buttonGrid.Children.Add (print, 1, 3);
+			buttonGrid.Children.Add (internalWS, 1, 4);
 
 
 
