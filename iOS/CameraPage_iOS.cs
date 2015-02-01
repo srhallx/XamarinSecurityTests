@@ -5,6 +5,7 @@ using Xamarin.Media;
 using Xamarin.Geolocation;
 using System.Threading.Tasks;
 using System.Net.Http;
+using System.Threading;
 
 
 
@@ -33,18 +34,12 @@ namespace XamarinSecurityTests.iOS
 
 		public void OpenGPS ()
 		{
-			var locator = new Geolocator { DesiredAccuracy = 50 };
-			//            new Geolocator (this) { ... }; on Android
-			locator.GetPositionAsync (timeout: 10000).ContinueWith (t => {
-				Position p = new Position();
-				p.Latitude = t.Result.Latitude;
-				p.Longitude = t.Result.Longitude;
-				p.Altitude = t.Result.Altitude;
-
-				if (GPSUpdated != null)
-					GPSUpdated(p, new EventArgs());
-			}, TaskScheduler.FromCurrentSynchronizationContext());
+			if (App.GpsPositionLocator == null) {
+				App.GpsPositionLocator = new Geolocator { DesiredAccuracy = 50 };
+			}
 		}
+			
+
 		#endregion
 	}
 }

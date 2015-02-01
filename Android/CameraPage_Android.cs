@@ -7,6 +7,7 @@ using Xamarin.Geolocation;
 using System.Threading.Tasks;
 using System.Net.Http;
 using OkHttp;
+using System.Threading;
 
 
 
@@ -20,10 +21,7 @@ namespace XamarinSecurityTests.Android
 		
 		}
 
-		public event EventHandler GPSUpdated;
-
 		#region ICameraPage implementation
-
 	
 		public void OpenCamera ()
 		{
@@ -38,20 +36,14 @@ namespace XamarinSecurityTests.Android
 				Forms.Context.StartActivity (intent);
 			}
 		}
-			
+
 		public void OpenGPS ()
 		{
-			var locator = new Geolocator (Forms.Context){ DesiredAccuracy = 50 };
-			locator.GetPositionAsync (timeout: 10000).ContinueWith (t => {
-				Position p = new Position();
-				p.Latitude = t.Result.Latitude;
-				p.Longitude = t.Result.Longitude;
-				p.Altitude = t.Result.Altitude;
-
-				if (GPSUpdated != null)
-					GPSUpdated(p, new EventArgs());
-			}, TaskScheduler.FromCurrentSynchronizationContext());
+			if (App.GpsPositionLocator == null) {
+				App.GpsPositionLocator = new Geolocator(Forms.Context) { DesiredAccuracy = 50 };
+			}
 		}
+
 		#endregion
 	}
 }

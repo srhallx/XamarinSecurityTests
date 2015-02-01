@@ -29,9 +29,9 @@ namespace XamarinSecurityTests.Android
 		{
 			PrintHelper photoPrinter = new PrintHelper (MainActivity.ActivityInstance);		
 			photoPrinter.ScaleMode = PrintHelper.ScaleModeFit;
-			var bitmap = BitmapFactory.DecodeResource (Application.Context.ApplicationContext.Resources, Resource.Drawable.bluetooth);
+			//var bitmap = BitmapFactory.DecodeResource (Application.Context.ApplicationContext.Resources, Resource.Drawable.bluetooth);
 		
-			photoPrinter.PrintBitmap ("test print", bitmap);
+			//photoPrinter.PrintBitmap ("test print", bitmap);
 		}
 
 		#endregion

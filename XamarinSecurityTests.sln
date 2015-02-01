@@ -52,7 +52,4 @@ Global
 		{A3B308D3-AE26-4A47-AA63-723535EDD1C4}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{A3B308D3-AE26-4A47-AA63-723535EDD1C4}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = iOS\XamarinSecurityTests.iOS.csproj
-	EndGlobalSection
 EndGlobal

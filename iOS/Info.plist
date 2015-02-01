@@ -5,7 +5,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>XamarinSecurityTests.iOS</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.xamarin.XamarinSecurityTests.iOS</string>
+	<string>com.xamarin.securitytest</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
@@ -13,7 +13,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MinimumOSVersion</key>
-	<string>7.0</string>
+	<string>8.0</string>
 	<key>UIDeviceFamily</key>
 	<array>
 		<integer>1</integer>
@@ -26,8 +26,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -42,5 +40,9 @@
 		<string>Icon@2x</string>
 		<string>Icon</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Need GPS okay?</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Need GPS okay?</string>
 </dict>
 </plist>

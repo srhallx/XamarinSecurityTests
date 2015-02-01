@@ -1,4 +1,5 @@
 ﻿using System;
+using Xamarin.Geolocation;
 
 namespace XamarinSecurityTests
 {
@@ -7,8 +8,6 @@ namespace XamarinSecurityTests
 		void OpenCamera();
 
 		void OpenGPS();
-
-		event EventHandler GPSUpdated;
 
 	
 	}

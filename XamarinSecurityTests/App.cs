@@ -10,6 +10,9 @@ namespace XamarinSecurityTests
 {
 	public class App
 	{
+		public static Geolocator GpsPositionLocator { get; set; }
+
+
 		public static Page GetMainPage ()
 		{	
 			ContentPage myPage = new ContentPage {
@@ -34,7 +37,7 @@ namespace XamarinSecurityTests
 			};
 
 			Button geo = new Button {
-				Text = "Geo",
+				Text = "Geo On",
 				Image = "compass.png"
 			};
 
@@ -50,7 +53,8 @@ namespace XamarinSecurityTests
 
 			Button print = new Button {
 				Text = "Print",
-				Image = "print.png"
+				Image = "print.png",
+				IsEnabled = false
 			};
 
 			Button share = new Button {
@@ -110,12 +114,32 @@ namespace XamarinSecurityTests
 			bluetooth.Clicked += (object sender, EventArgs e) => {
 				myPage.Navigation.PushAsync(new BTConnectPage());
 			};
+				
+			bool geoEnabled = false;
+		
+			geo.Clicked += (object sender, EventArgs e1) => {
 
-			geo.Clicked += (object sender, EventArgs e) => {
+				if (geoEnabled) {
+					GpsPositionLocator.StopListening();
+					geoEnabled = false;
+					geo.Text = "Geo On";
+					GpsPositionLocator = null;
+					return;
+				}
+
 				DependencyService.Get<ICameraPage>().OpenGPS();
-				DependencyService.Get<ICameraPage>().GPSUpdated += (object s, EventArgs e1) => {
-					Position gps = (Position)s;
-					results.Text = String.Format("GPS: lat{0} lon{1} alt{2}", gps.Latitude, gps.Longitude, gps.Altitude) + "\n";
+				GpsPositionLocator.StartListening(500, 5);
+				geoEnabled = true;
+				geo.Text = "Geo Off";
+
+				GpsPositionLocator.GetPositionAsync (timeout: 10000).ContinueWith (t => {
+					Console.WriteLine ("Position Status: {0}", t.Result.Timestamp);
+					Console.WriteLine ("Position Latitude: {0}", t.Result.Latitude);
+					Console.WriteLine ("Position Longitude: {0}", t.Result.Longitude);
+				}, TaskScheduler.FromCurrentSynchronizationContext());
+					
+				GpsPositionLocator.PositionChanged += (object sender1, PositionEventArgs e) => {
+					results.Text = String.Format("GPS: lat {0} lon {1}", e.Position.Latitude.ToString(), e.Position.Longitude.ToString()) + "\n";
 				};
 			};
 
@@ -176,6 +200,9 @@ namespace XamarinSecurityTests
 
 			return new NavigationPage (myPage);
 		}
+
+
+
 	}
 }
 
