@@ -37,6 +37,11 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <ConsolePause>false</ConsolePause>
     <BundleAssemblies>true</BundleAssemblies>
+    <AndroidKeyStore>True</AndroidKeyStore>
+    <AndroidSigningKeyStore>/Users/steve/stevexam.keystore</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>fever4336</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>publishingdoc</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>fever4336</AndroidSigningKeyPass>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

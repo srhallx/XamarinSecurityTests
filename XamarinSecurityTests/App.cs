@@ -95,7 +95,12 @@ namespace XamarinSecurityTests
 			};
 
 			camera.Clicked += (object sender, EventArgs e) => {
-				DependencyService.Get<ICameraPage>().OpenCamera();
+				try {
+					DependencyService.Get<ICameraPage>().OpenCamera();
+				} catch (Exception ex)
+				{
+					results.Text = ex.Message;
+				}
 			};
 
 			web.Clicked += (object sender, EventArgs e) => {
