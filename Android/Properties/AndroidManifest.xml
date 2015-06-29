@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="XamarinSecurityTests.Android" android:versionCode="3" android:versionName="Tres">
-	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="19" />
+	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="21" />
 	<application android:label="XamarinSecurityTests.Android" android:icon="@drawable/icon">
 	</application>
 	<uses-permission android:name="android.permission.CAMERA" />

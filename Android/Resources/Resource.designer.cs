@@ -28,8 +28,8 @@ namespace XamarinSecurityTests.Android
 		{
 			global::SQLite.Resource.String.ApplicationName = global::XamarinSecurityTests.Android.Resource.String.ApplicationName;
 			global::SQLite.Resource.String.Hello = global::XamarinSecurityTests.Android.Resource.String.Hello;
-			global::Xamarin.InsightsCore.Resource.String.ApplicationName = global::XamarinSecurityTests.Android.Resource.String.ApplicationName;
-			global::Xamarin.InsightsCore.Resource.String.Hello = global::XamarinSecurityTests.Android.Resource.String.Hello;
+			global::Xamarin.Forms.Platform.Resource.String.ApplicationName = global::XamarinSecurityTests.Android.Resource.String.ApplicationName;
+			global::Xamarin.Forms.Platform.Resource.String.Hello = global::XamarinSecurityTests.Android.Resource.String.Hello;
 			global::ModernHttpClient.Resource.String.library_name = global::XamarinSecurityTests.Android.Resource.String.library_name;
 		}
 		

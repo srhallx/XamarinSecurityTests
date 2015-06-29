@@ -31,13 +31,17 @@ namespace XamarinSecurityTests
 				StoreURI(webServiceURI.Text);
 			};
 
+
+
 			execWS.Clicked += (object sender, EventArgs e) => {
 				var httpClient = new HttpClient(new NativeMessageHandler());
 
+
 				Task<HttpResponseMessage> getResponse = httpClient.GetAsync(webServiceURI.Text);
 				HttpResponseMessage msg = getResponse.Result;
+
 				Task<string> finalMsg = msg.Content.ReadAsStringAsync();
-				response.Text = "HTTP\n" + finalMsg.Result.Substring(0, 1000);
+				response.Text = "HTTP (" + msg.StatusCode.ToString() + ")\n" + finalMsg.Result.Substring(0, 1000);
 			
 			};
 
