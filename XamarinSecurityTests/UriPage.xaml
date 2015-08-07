@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinSecurityTests.UriPage">
+	<StackLayout Orientation="Vertical">
+		<Entry Placeholder="URI" x:Name="UriText"/>
+		<Picker x:Name="UriPicker" HorizontalOptions="FillAndExpand" SelectedIndexChanged="PickerChanged">
+	        <Picker.Items>
+	            <x:String>Facetime</x:String> 
+	            <x:String>SMS</x:String>
+	            <x:String>Web</x:String>
+	            <x:String>Maps</x:String>
+	            <x:String>Phone</x:String>
+	            <x:String>Mail</x:String>
+	            <x:String>Music</x:String>
+	            <x:String>YouTube</x:String>
+	            <x:String>Facebook</x:String>
+	            <x:String>Twitter</x:String>
+	        </Picker.Items>
+    	</Picker> 
+    	<Button Text="Open URI" Clicked="OpenUri"/>
+	</StackLayout>
+</ContentPage>

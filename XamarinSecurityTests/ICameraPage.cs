@@ -7,7 +7,7 @@ namespace XamarinSecurityTests
 	{
 		void OpenCamera();
 
-		void OpenGPS();
+		//void OpenGPS();
 
 	
 	}

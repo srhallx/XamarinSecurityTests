@@ -9,6 +9,8 @@ using Android.Widget;
 using Android.OS;
 using Xamarin;
 using Xamarin.Forms.Platform.Android;
+using Xamarin.Contacts;
+
 
 
 namespace XamarinSecurityTests.Android
@@ -25,6 +27,8 @@ namespace XamarinSecurityTests.Android
 			ActivityInstance = this;
 
 			Insights.Initialize("48e4e4b9b56bb7789f883b4b9aeeb3f1f2a55836", this);
+
+			App.ContactsBook = new Xamarin.Contacts.AddressBook ();
 
 			Xamarin.Forms.Forms.Init (this, bundle);
 

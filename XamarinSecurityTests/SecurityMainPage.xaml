@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="XamarinSecurityTests.SecurityMainPage">
+
+		<StackLayout Orientation="Vertical">
+			<StackLayout Orientation="Horizontal">
+				<Button Text="SQL" Image="database.png" Clicked="SqlClicked"  WidthRequest="150"/>
+				<Button Text="Cam" Image="camera.png" Clicked="CameraClicked" WidthRequest="150"/>
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Button Text="Web" Image="earth.png" Clicked="WebClicked" WidthRequest="150"/>
+				<StackLayout Orientation="Horizontal" WidthRequest="150">
+					<Switch Toggled="GpsToggled" x:Name="GpsSwitch" IsToggled="false"/>
+					<Label Text="GPS"/>
+				</StackLayout> 
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Button Text="WS" Image="ws.png" Clicked="WebServiceClicked" WidthRequest="150"/>
+				<Button Text="Audio" Image="audio.png" Clicked="AudioClicked" WidthRequest="150"/>
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Button Text="BT" Image="bluetooth.png" IsEnabled="false" WidthRequest="150" />
+				<Button Text="Print" Image="print.png" IsEnabled="false"  WidthRequest="150"/>
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Button Text="Share" Image="share.png" Clicked="ShareClicked"  WidthRequest="150"/>
+				<Button Text="InternalWS" Clicked="InternalWSClicked" WidthRequest="150"/>
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Button Text="URI" Image="share.png" Clicked="UriClicked"  WidthRequest="150"/>
+				<Button Text="Contacts" Clicked="ContactsClicked" WidthRequest="150"/>
+			</StackLayout>
+			<Editor x:Name="Output" VerticalOptions="FillAndExpand"/>
+		</StackLayout>
+
+
+</ContentPage>

@@ -32,12 +32,12 @@ namespace XamarinSecurityTests.iOS
 		}
 			
 
-		public void OpenGPS ()
-		{
-			if (App.GpsPositionLocator == null) {
-				App.GpsPositionLocator = new Geolocator { DesiredAccuracy = 50 };
-			}
-		}
+//		public void OpenGPS ()
+//		{
+//			if (App.GpsPositionLocator == null) {
+//				App.GpsPositionLocator = new Geolocator { DesiredAccuracy = 50 };
+//			}
+//		}
 			
 
 		#endregion
