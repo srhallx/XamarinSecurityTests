@@ -3,7 +3,7 @@
 	<ListView x:Name="EmployeeView">
     <ListView.ItemTemplate>
       <DataTemplate>
-        <TextCell Text="{Binding LastName}" />
+        <TextCell Text="{Binding DisplayName}" />
       </DataTemplate>
     </ListView.ItemTemplate>
   </ListView>

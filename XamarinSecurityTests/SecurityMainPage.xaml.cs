@@ -19,6 +19,16 @@ namespace XamarinSecurityTests
 
 		}
 
+//		- Ability to use FaceTime (or Video chat) - Complete
+//		- Ability to use Instant Messaging. - Complete
+//		- Print & Bluetooth button were disabled on both containerized & non-containerized app. Enable it.
+//		- Option to pull contact from device - Complete
+//		- Option to save contact to device
+//		- To send email using the configured native email - Complete
+//			- To save clicked photo into Device Gallery.
+//			- Improve Share button rendering. Currently it lists the app however the doesn't appear correctly on viewable area. Tried device rotation as well [refer screenshot]. - Works for me
+//
+
 		// Event handlers for buttons
 		void SqlClicked(object sender, EventArgs e)
 		{

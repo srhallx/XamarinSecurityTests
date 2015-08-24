@@ -29,8 +29,8 @@ namespace XamarinSecurityTests
 				EmployeeView.ItemsSource = App.ContactsBook.OrderBy(c=>c.LastName);
 
 			}, TaskScheduler.FromCurrentSynchronizationContext());
-
 		}
+			
 	}
 }
 
