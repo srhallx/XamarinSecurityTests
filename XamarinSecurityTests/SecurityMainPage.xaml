@@ -22,7 +22,7 @@
 			</StackLayout>
 			<StackLayout Orientation="Horizontal">
 				<Button Text="BT" Image="bluetooth.png" IsEnabled="false" WidthRequest="150" />
-				<Button Text="Print" Image="print.png" IsEnabled="false"  WidthRequest="150"/>
+				<Button Text="Print" Image="print.png" Clicked="PrintClicked"  WidthRequest="150"/>
 			</StackLayout>
 			<StackLayout Orientation="Horizontal">
 				<Button Text="Share" Image="share.png" Clicked="ShareClicked"  WidthRequest="150"/>

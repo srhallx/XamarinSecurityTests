@@ -28,9 +28,9 @@ namespace XamarinSecurityTests.Android
 		{
 			global::SQLite.Resource.String.ApplicationName = global::XamarinSecurityTests.Android.Resource.String.ApplicationName;
 			global::SQLite.Resource.String.Hello = global::XamarinSecurityTests.Android.Resource.String.Hello;
+			global::ModernHttpClient.Resource.String.library_name = global::XamarinSecurityTests.Android.Resource.String.library_name;
 			global::Xamarin.Forms.Platform.Resource.String.ApplicationName = global::XamarinSecurityTests.Android.Resource.String.ApplicationName;
 			global::Xamarin.Forms.Platform.Resource.String.Hello = global::XamarinSecurityTests.Android.Resource.String.Hello;
-			global::ModernHttpClient.Resource.String.library_name = global::XamarinSecurityTests.Android.Resource.String.library_name;
 		}
 		
 		public partial class Attribute
@@ -133,17 +133,17 @@ namespace XamarinSecurityTests.Android
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040002
-			public const int ApplicationName = 2130968578;
-			
 			// aapt resource value: 0x7f040001
-			public const int Hello = 2130968577;
+			public const int ApplicationName = 2130968577;
+			
+			// aapt resource value: 0x7f040000
+			public const int Hello = 2130968576;
 			
 			// aapt resource value: 0x7f040004
 			public const int app_name = 2130968580;
 			
-			// aapt resource value: 0x7f040000
-			public const int library_name = 2130968576;
+			// aapt resource value: 0x7f040002
+			public const int library_name = 2130968578;
 			
 			// aapt resource value: 0x7f040003
 			public const int print = 2130968579;

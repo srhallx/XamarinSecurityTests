@@ -20,7 +20,7 @@ namespace XamarinSecurityTests.iOS
 		{
 			Forms.Init ();
 
-			Insights.Initialize("48e4e4b9b56bb7789f883b4b9aeeb3f1f2a55836");
+			//Insights.Initialize("48e4e4b9b56bb7789f883b4b9aeeb3f1f2a55836");
 
 			App.ContactsBook = new Xamarin.Contacts.AddressBook ();
 

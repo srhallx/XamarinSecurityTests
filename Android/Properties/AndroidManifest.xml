@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="XamarinSecurityTests.Android" android:versionCode="3" android:versionName="Tres">
-	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="21" />
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="21" />
 	<application android:label="XamarinSecurityTests.Android" android:icon="@drawable/icon">
 	</application>
 	<uses-permission android:name="android.permission.CAMERA" />
@@ -9,4 +9,7 @@
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+	<uses-permission android:name="android.permission.READ_CONTACTS" />
+	<uses-permission android:name="android.permission.WRITE_CONTACTS" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 </manifest>

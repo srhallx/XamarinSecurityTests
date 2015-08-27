@@ -39,9 +39,13 @@ namespace XamarinSecurityTests.Android
 				Finish(); // back to the previous activity
 			};
 				
+
 			var pdfFile = new Java.IO.File ("gettingstarted.pdf");
 			var filepath = global::Android.Net.Uri.FromFile(pdfFile);
 
+			if (!pdfFile.Exists ())
+				Console.WriteLine ("Could not find gettingstarted.pdf");
+			
 			Intent intent = new Intent (Intent.ActionView);
 			intent.SetDataAndType(filepath, "application/pdf");
 

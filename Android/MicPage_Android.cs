@@ -84,9 +84,7 @@ namespace XamarinSecurityTests.Android
 
 
 			}
-
-		}
-			
+		}			
 		#endregion
 	}
 }

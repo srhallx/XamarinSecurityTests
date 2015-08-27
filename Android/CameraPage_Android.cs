@@ -37,12 +37,6 @@ namespace XamarinSecurityTests.Android
 			}
 		}
 
-		public void OpenGPS ()
-		{
-			if (App.GpsPositionLocator == null) {
-				App.GpsPositionLocator = new Geolocator(Forms.Context) { DesiredAccuracy = 50 };
-			}
-		}
 
 		#endregion
 	}

@@ -176,6 +176,7 @@
     <Compile Include="OpenDocViewController.cs" />
     <Compile Include="BTConnectPageRenderer.cs" />
     <Compile Include="MicPage_iOS.cs" />
+    <Compile Include="PrintPage_iOS.cs" />
   </ItemGroup>
   <Import Project="..\XamarinSecurityTests\XamarinSecurityTests.projitems" Label="Shared" Condition="Exists('..\XamarinSecurityTests\XamarinSecurityTests.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />

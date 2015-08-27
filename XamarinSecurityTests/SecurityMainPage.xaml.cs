@@ -101,7 +101,13 @@ namespace XamarinSecurityTests
 			}
 
 			//DependencyService.Get<ICameraPage>().OpenGPS();
-			GpsPositionLocator = new Geolocator ();
+			#if __IOS__
+				GpsPositionLocator = new Geolocator ();
+			#endif
+			#if __ANDROID__
+				GpsPositionLocator = new Geolocator (Forms.Context);
+			#endif
+			
 			GpsPositionLocator.StartListening(500, 5);
 
 			GpsPositionLocator.GetPositionAsync (timeout: 10000).ContinueWith (t => {
@@ -135,6 +141,8 @@ namespace XamarinSecurityTests
 			Task<string> finalMsg2 = msg2.Content.ReadAsStringAsync();
 			Output.Text += "\nHTTPS\n" + finalMsg2.Result.Substring(0,300) + "...\n";
 		}
+
+
 	}
 }
 
