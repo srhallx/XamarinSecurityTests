@@ -14,6 +14,7 @@ using Xamarin.Geolocation;
 
 
 
+
 namespace XamarinSecurityTests.Android
 {
 	[Activity (Label = "XamarinSecurityTests.Android.Android", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
@@ -29,7 +30,7 @@ namespace XamarinSecurityTests.Android
 
 			ActivityInstance = this;
 
-			//Insights.Initialize("48e4e4b9b56bb7789f883b4b9aeeb3f1f2a55836", this);
+			Insights.Initialize("48e4e4b9b56bb7789f883b4b9aeeb3f1f2a55836", this);
 
 			App.ContactsBook = new Xamarin.Contacts.AddressBook (this);
 

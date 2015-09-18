@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component format="1" id="xamarin-insights">
+  <name>Xamarin.Insights</name>
+  <publisher>Xamarin</publisher>
+  <publisher-url>http://insights.xamarin.com</publisher-url>
+  <version>1.10.4</version>
+  <summary>Insights for your Apps</summary>
+  <samples>
+    <sample id="InsightsSample.iOS">
+      <name>Insights Sample</name>
+      <summary>Insights Sample for iOS</summary>
+    </sample>
+    <sample id="InsightsSample.Android">
+      <name>Insights Sample</name>
+      <summary>Insights Sample for Android</summary>
+    </sample>
+  </samples>
+</component>

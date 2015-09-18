@@ -14,8 +14,24 @@ namespace XamarinSecurityTests
 		{
 			InitializeComponent ();
 
+
+		}
+
+		protected override void OnAppearing ()
+		{
+			base.OnAppearing ();
+
 			GetAddresses ();
 
+			AddContact.Clicked += (object sender, EventArgs e) => {
+				if (App.ContactsBook.IsReadOnly == true) {
+					DisplayAlert("Contacts", "Contacts Book is marked read-only", "Cancel");
+				}
+				else {
+					App.ContactsBook.
+				}
+			};
+				
 		}
 
 		private async void GetAddresses() 
