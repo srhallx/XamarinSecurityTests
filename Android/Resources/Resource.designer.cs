@@ -26,11 +26,11 @@ namespace XamarinSecurityTests.Android
 		
 		public static void UpdateIdValues()
 		{
-			global::SQLite.Resource.String.ApplicationName = global::XamarinSecurityTests.Android.Resource.String.ApplicationName;
-			global::SQLite.Resource.String.Hello = global::XamarinSecurityTests.Android.Resource.String.Hello;
 			global::ModernHttpClient.Resource.String.library_name = global::XamarinSecurityTests.Android.Resource.String.library_name;
 			global::Xamarin.Forms.Platform.Resource.String.ApplicationName = global::XamarinSecurityTests.Android.Resource.String.ApplicationName;
 			global::Xamarin.Forms.Platform.Resource.String.Hello = global::XamarinSecurityTests.Android.Resource.String.Hello;
+			global::PCLStorage.Resource.String.ApplicationName = global::XamarinSecurityTests.Android.Resource.String.ApplicationName;
+			global::PCLStorage.Resource.String.Hello = global::XamarinSecurityTests.Android.Resource.String.Hello;
 		}
 		
 		public partial class Attribute

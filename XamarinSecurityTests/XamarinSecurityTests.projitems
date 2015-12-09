@@ -34,6 +34,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ContactsPage.xaml.cs">
       <DependentUpon>ContactsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)FileOperationsPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)SecurityMainPage.xaml">

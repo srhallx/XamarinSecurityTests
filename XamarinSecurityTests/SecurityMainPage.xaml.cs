@@ -44,6 +44,10 @@ namespace XamarinSecurityTests
 			dao.DeleteRows("testdb.db3");
 		}
 
+		void FilesClicked(object sender, EventArgs e){
+			this.Navigation.PushAsync (new FileOperationsPage ());
+		}
+
 		void InternalWSClicked(object sender, EventArgs e)
 		{
 			

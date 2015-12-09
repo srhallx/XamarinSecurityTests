@@ -32,6 +32,9 @@
 				<Button Text="URI" Image="share.png" Clicked="UriClicked"  WidthRequest="150"/>
 				<Button Text="Contacts" Clicked="ContactsClicked" WidthRequest="150"/>
 			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Button Text="File IO" Clicked="FilesClicked" WidthRequest="150"/>
+			</StackLayout>
 			<Editor x:Name="Output" VerticalOptions="FillAndExpand"/>
 		</StackLayout>
 

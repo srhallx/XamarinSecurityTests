@@ -28,7 +28,7 @@ namespace XamarinSecurityTests
 					DisplayAlert("Contacts", "Contacts Book is marked read-only", "Cancel");
 				}
 				else {
-					App.ContactsBook.
+					//App.ContactsBook.
 				}
 			};
 				
