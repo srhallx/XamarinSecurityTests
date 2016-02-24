@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-using Xamarin.Geolocation;
+using Plugin.Geolocator;
 using Xamarin.Forms;
 using ModernHttpClient;
+using Plugin.Geolocator.Abstractions;
 
 namespace XamarinSecurityTests
 {
 	public partial class SecurityMainPage : ContentPage
 	{
-		public static Geolocator GpsPositionLocator { get; set; }
+		public static IGeolocator GpsPositionLocator { get { return CrossGeolocator.Current; }}
 
 		public SecurityMainPage ()
 		{
@@ -95,26 +96,17 @@ namespace XamarinSecurityTests
 			this.Navigation.PushAsync(new BTConnectPage());
 		}
 
-		void GpsToggled(object sender, EventArgs evt)
+		async void GpsToggled(object sender, EventArgs evt)
 		{
 			
 			if (!GpsSwitch.IsToggled) {
-				GpsPositionLocator.StopListening();
-				GpsPositionLocator = null;
+				await GpsPositionLocator.StopListeningAsync();
 				return;
 			}
 
-			//DependencyService.Get<ICameraPage>().OpenGPS();
-			#if __IOS__
-				GpsPositionLocator = new Geolocator ();
-			#endif
-			#if __ANDROID__
-				GpsPositionLocator = new Geolocator (Forms.Context);
-			#endif
-			
-			GpsPositionLocator.StartListening(500, 5);
+			await GpsPositionLocator.StartListeningAsync(500, 5);
 
-			GpsPositionLocator.GetPositionAsync (timeout: 10000).ContinueWith (t => {
+			GpsPositionLocator.GetPositionAsync (10000).ContinueWith (t => {
 				Console.WriteLine ("Position Status: {0}", t.Result.Timestamp);
 				Console.WriteLine ("Position Latitude: {0}", t.Result.Latitude);
 				Console.WriteLine ("Position Longitude: {0}", t.Result.Longitude);

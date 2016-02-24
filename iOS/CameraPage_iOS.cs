@@ -1,11 +1,13 @@
 ﻿using System;
 using Xamarin.Forms;
 using XamarinSecurityTests.iOS;
-using Xamarin.Media;
-using Xamarin.Geolocation;
+using Plugin.Media;
+using Plugin.Geolocator;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Threading;
+using Plugin.Media;
+using Plugin.Media.Abstractions;
 
 
 
@@ -23,12 +25,11 @@ namespace XamarinSecurityTests.iOS
 
 		#region ICameraPage implementation
 
-		public void OpenCamera ()
+		public async void OpenCamera ()
 		{
-			var picker = new MediaPicker();
 			StoreCameraMediaOptions scmo = new StoreCameraMediaOptions ();
 			scmo.Name = "tempphoto";
-			picker.TakePhotoAsync (scmo);
+		 	await CrossMedia.Current.TakePhotoAsync (scmo);
 		}
 			
 

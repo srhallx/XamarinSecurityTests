@@ -6,7 +6,7 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Xamarin;
 using Xamarin.Forms;
-using Xamarin.Contacts;
+using Plugin.Contacts;
 
 
 namespace XamarinSecurityTests.iOS
@@ -22,7 +22,7 @@ namespace XamarinSecurityTests.iOS
 
 			Insights.Initialize("48e4e4b9b56bb7789f883b4b9aeeb3f1f2a55836");
 
-			App.ContactsBook = new Xamarin.Contacts.AddressBook ();
+			App.ContactsBook = new Plugin.Contacts.AddressBook ();
 
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
 			

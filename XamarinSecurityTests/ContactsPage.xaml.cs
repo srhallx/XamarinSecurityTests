@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using System.Linq;
 
 using Xamarin.Forms;
-using Xamarin.Contacts;
+using Plugin.Contacts;
 
 namespace XamarinSecurityTests
 {
@@ -24,7 +24,7 @@ namespace XamarinSecurityTests
 			GetAddresses ();
 
 			AddContact.Clicked += (object sender, EventArgs e) => {
-				if (App.ContactsBook.IsReadOnly == true) {
+				if (CrossContacts.Current.IsReadOnly == true) {
 					DisplayAlert("Contacts", "Contacts Book is marked read-only", "Cancel");
 				}
 				else {

@@ -1,11 +1,9 @@
 ﻿using System;
 using Xamarin.Forms;
-using Xamarin.Media;
-using Xamarin.Geolocation;
 using System.Net.Http;
 using ModernHttpClient;
 using System.Threading.Tasks;
-using Xamarin.Contacts;
+using Plugin.Contacts;
 
 namespace XamarinSecurityTests
 {

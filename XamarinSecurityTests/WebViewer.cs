@@ -14,7 +14,7 @@ namespace XamarinSecurityTests
 
 			Entry urlBar = new Entry {
 				HorizontalOptions = LayoutOptions.FillAndExpand,
-				Text = "http://www.google.com"
+				Text = "https://www.google.com"
 			};
 
 			WebView viewer = new WebView {
@@ -29,7 +29,7 @@ namespace XamarinSecurityTests
 			goButton.Clicked += (object sender, EventArgs e) => {
 				string url = urlBar.Text;
 				if (!url.StartsWith("http://") && !url.StartsWith("https://"))
-					url = "http://" + url;
+					url = "https://" + url;
 
 				viewer.Source = new UrlWebViewSource { Url = url };
 			};
