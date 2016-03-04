@@ -22,7 +22,8 @@ namespace XamarinSecurityTests
 
 			Title = "Internal WS";
 
-			var webServiceURI = new Entry { Placeholder = "Enter GET URI" };
+			var instructions = new Label () { Text = "Enter an internal web service URI to query using HTTP GET" };
+			var webServiceURI = new Entry() { Placeholder = "Enter URI" };
 			var execWS = new Button { Text = "Exec WS" };
 			var response = new Label ();
 
@@ -48,10 +49,11 @@ namespace XamarinSecurityTests
 			Content = new StackLayout { 
 
 				Children = {
+					instructions,
 					webServiceURI, 
 					execWS, 
 					response
-				}
+				}, Padding=new Thickness(20,20,20,0)
 
 			};
 

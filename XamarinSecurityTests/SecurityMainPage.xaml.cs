@@ -126,11 +126,6 @@ namespace XamarinSecurityTests
 		{
 			var httpClient = new HttpClient(new NativeMessageHandler());
 
-			Task<HttpResponseMessage> getResponse = httpClient.GetAsync("http://wsf.cdyne.com/WeatherWS/Weather.asmx/GetCityForecastByZIP?ZIP=76092");
-			HttpResponseMessage msg = getResponse.Result;
-			Task<string> finalMsg = msg.Content.ReadAsStringAsync();
-			Output.Text = "HTTP\n" + finalMsg.Result.Substring(0, 300) + "...\n";
-
 			//api key is limited to 1000 requests/day
 			Task<HttpResponseMessage> getResponse2 = httpClient.GetAsync("https://api.forecast.io/forecast/f0fc68cd396162493bc12640cdbfdde0/37.8267,-122.423");
 			HttpResponseMessage msg2 = getResponse2.Result;

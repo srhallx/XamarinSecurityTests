@@ -8,14 +8,16 @@ namespace XamarinSecurityTests
 		public OpenAudioPage ()
 		{
 
+			Title = "Audio";
 
-			Button btnRecord = new Button { Text = "1 - Record" };
-			Button btnStop = new Button { Text = "2 - Stop Recording", IsEnabled = false };
-			Button btnPlay = new Button { Text = "3 - Play", IsEnabled = false };
+			Button btnRecord = new Button { Text = "Record" };
+			Button btnStop = new Button { Text = "Stop Recording", IsEnabled = false };
+			Button btnPlay = new Button { Text = "Play", IsEnabled = false };
+			ActivityIndicator aiWorking = new ActivityIndicator () { IsVisible = false };
 
 			StackLayout myLayout = new StackLayout { Padding = new Thickness (20, 80, 20, 20),
-				Spacing = 60,
-				Children = { btnRecord, btnStop, btnPlay }
+				Spacing = 40,
+				Children = { btnRecord, btnStop, btnPlay, aiWorking }
 			};
 
 			Content = myLayout;
@@ -23,11 +25,19 @@ namespace XamarinSecurityTests
 			btnRecord.Clicked += (object sender, EventArgs e) => {
 				DependencyService.Get<IMicPage>().StartRecording();
 				btnStop.IsEnabled = true;
-				btnPlay.IsEnabled = true;
+				btnRecord.IsEnabled = false;
+				btnPlay.IsEnabled = false;
+				aiWorking.IsVisible = true;
+				aiWorking.IsRunning = true;
 			};
 
 			btnStop.Clicked += (object sender, EventArgs e) => {
 				DependencyService.Get<IMicPage>().StopRecording();
+				btnPlay.IsEnabled = true;
+				btnStop.IsEnabled = false;
+				btnRecord.IsEnabled = true;
+				aiWorking.IsRunning = false;
+				aiWorking.IsVisible = false;
 			};
 
 			btnPlay.Clicked += (object sender, EventArgs e) => {

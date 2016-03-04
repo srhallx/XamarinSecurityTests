@@ -13,8 +13,9 @@ namespace XamarinSecurityTests.iOS
 			var myView = new UIView (new RectangleF (0, 0, 320, 480));
 			this.View.Add (myView);
 
-			UILabel label = new UILabel (new RectangleF (0, 100, 320, 50));
-			label.Text = "You must have a PDF app installed.";
+			UILabel label = new UILabel (new RectangleF (0, 100, 320, 150));
+			label.Text = "If share is enabled, you should see the Open In dialog on top of this window.  ";
+			label.Lines = 4;
 
 			myView.Add (label);
 

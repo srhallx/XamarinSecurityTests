@@ -2,50 +2,61 @@
 <ContentPage 
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-	x:Class="XamarinSecurityTests.SecurityMainPage">
+	x:Class="XamarinSecurityTests.SecurityMainPage"
+	Title="SecTest Suite">
 
+	<StackLayout Spacing="0">
 
-	<Grid>
-		<Grid.RowDefinitions>
-			<RowDefinition Height="100" />
-			<RowDefinition Height="*" />
-		</Grid.RowDefinitions>
+		<StackLayout BackgroundColor="Purple" HorizontalOptions="Fill" HeightRequest="14">
+			<Label Text="Test Output" FontSize="12" TextColor="White" VerticalOptions="Center"/>
+		</StackLayout>
 
-			<Editor Grid.Row="0" x:Name="Output" VerticalOptions="FillAndExpand"/>
-			<ScrollView Grid.Row="1">
+		<Editor HeightRequest="150" x:Name="Output" VerticalOptions="FillAndExpand" BackgroundColor="#EEEEEE"/>
 
-			<StackLayout>
-			<StackLayout Orientation="Horizontal">
-				<Button Text="SQL" Image="database.png" Clicked="SqlClicked"  WidthRequest="150"/>
-				<Button Text="Cam" Image="camera.png" Clicked="CameraClicked" WidthRequest="150"/>
-			</StackLayout>
-			<StackLayout Orientation="Horizontal">
-				<Button Text="Web" Image="earth.png" Clicked="WebClicked" WidthRequest="150"/>
-				<StackLayout Orientation="Horizontal" WidthRequest="150">
+		<StackLayout BackgroundColor="Purple" HorizontalOptions="Fill" HeightRequest="14">
+			<Label Text="Test Commands" FontSize="12" TextColor="White" VerticalOptions="Center"/>
+		</StackLayout>
+
+		<ScrollView Padding="20,0,20,0">
+			<Grid RowSpacing="0" ColumnSpacing="0">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="35" />
+					<RowDefinition Height="35" />
+					<RowDefinition Height="35" />
+					<RowDefinition Height="35" />
+					<RowDefinition Height="35" />
+					<RowDefinition Height="35" />
+					<RowDefinition Height="*" />
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="150" />
+					<ColumnDefinition Width="150" />
+				</Grid.ColumnDefinitions>
+		
+
+				<Button Text="SQL" Clicked="SqlClicked" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start"/>
+				<Button Text="Cam" Clicked="CameraClicked" Grid.Row="0" Grid.Column="1" HorizontalOptions="Start"/>
+			
+				<Button Text="Web" Clicked="WebClicked" Grid.Row="1" Grid.Column="0" HorizontalOptions="Start"/>
+				<StackLayout Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
 					<Switch Toggled="GpsToggled" x:Name="GpsSwitch" IsToggled="false"/>
-					<Label Text="GPS"/>
+					<Label Text="GPS" YAlign="Center" FontSize="14"/>
 				</StackLayout> 
-			</StackLayout>
-			<StackLayout Orientation="Horizontal">
-				<Button Text="WS" Image="ws.png" Clicked="WebServiceClicked" WidthRequest="150"/>
-				<Button Text="Audio" Image="audio.png" Clicked="AudioClicked" WidthRequest="150"/>
-			</StackLayout>
-			<StackLayout Orientation="Horizontal">
-				<Button Text="BT" Image="bluetooth.png" IsEnabled="false" WidthRequest="150" />
-				<Button Text="Print" Image="print.png" Clicked="PrintClicked"  WidthRequest="150"/>
-			</StackLayout>
-			<StackLayout Orientation="Horizontal">
-				<Button Text="Share" Image="share.png" Clicked="ShareClicked"  WidthRequest="150"/>
-				<Button Text="InternalWS" Clicked="InternalWSClicked" WidthRequest="150"/>
-			</StackLayout>
-			<StackLayout Orientation="Horizontal">
-				<Button Text="URI" Image="share.png" Clicked="UriClicked"  WidthRequest="150"/>
-				<Button Text="Contacts" Clicked="ContactsClicked" WidthRequest="150"/>
-			</StackLayout>
-			<StackLayout Orientation="Horizontal">
-				<Button Text="File IO" Clicked="FilesClicked" WidthRequest="150"/>
-			</StackLayout>
-			</StackLayout>
-			</ScrollView>
-	</Grid>
+
+				<Button Text="Web Service" Clicked="WebServiceClicked" Grid.Row="2" Grid.Column="0" HorizontalOptions="Start"/>
+				<Button Text="Audio" Clicked="AudioClicked" Grid.Row="2" Grid.Column="1" HorizontalOptions="Start"/>
+			
+				<Button Text="BT" IsEnabled="false" Grid.Row="3" Grid.Column="0" HorizontalOptions="Start"/>
+				<Button Text="Print" Clicked="PrintClicked" Grid.Row="3" Grid.Column="1" HorizontalOptions="Start"/>
+
+				<Button Text="Share" Clicked="ShareClicked" Grid.Row="4" Grid.Column="0" HorizontalOptions="Start"/>
+				<Button Text="InternalWS" Clicked="InternalWSClicked" Grid.Row="4" Grid.Column="1" HorizontalOptions="Start"/>
+
+				<Button Text="URI" Clicked="UriClicked" Grid.Row="5" Grid.Column="0" HorizontalOptions="Start"/>
+				<Button Text="Contacts" Clicked="ContactsClicked" Grid.Row="5" Grid.Column="1" HorizontalOptions="Start"/>
+
+				<Button Text="File IO" Clicked="FilesClicked" Grid.Row="6" Grid.Column="0" HorizontalOptions="Start"/>
+			</Grid>
+		</ScrollView>
+	</StackLayout>
 </ContentPage>

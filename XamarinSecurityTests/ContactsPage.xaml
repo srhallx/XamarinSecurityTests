@@ -2,12 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	x:Class="XamarinSecurityTests.ContactsPage">
-	<ToolbarItem Text="+" x:Name="AddContact"/>
-	<ListView x:Name="EmployeeView">
-    <ListView.ItemTemplate>
-      <DataTemplate>
-        <TextCell Text="{Binding DisplayName}" />
-      </DataTemplate>
-    </ListView.ItemTemplate>
-  </ListView>
+
+	<ContentPage.ToolbarItems>
+  		<ToolbarItem x:Name="AddContact" Name="+" Order="Primary" Priority="0" />
+ 	</ContentPage.ToolbarItems>
+
+	<StackLayout>
+		<ListView x:Name="EmployeeView">
+	    	<ListView.ItemTemplate>
+	      		<DataTemplate>
+	        		<TextCell Text="{Binding DisplayName}" />
+	      		</DataTemplate>
+	    	</ListView.ItemTemplate>
+	  	</ListView>
+  	</StackLayout>
 </ContentPage>
